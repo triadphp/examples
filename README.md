@@ -5,7 +5,6 @@ Here you can find use cases for Triad PHP framework.
 
 - Empty Project 
 contains very basic way to implement MVP handler.
-
 - REST Service 
 contains sample of JSON REST API server that handles simple user creation and editing.
 
