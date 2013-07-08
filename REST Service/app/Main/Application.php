@@ -27,7 +27,10 @@ class Application extends \Triad\Application
 
         // redis
         if (isset($this->configuration["redis"]) && $this->configuration["redis"]["enabled"]) {
-            $this->redis = new Redis();
+            require_once(LIBS_DIR . "/Predis/autoload.php");
+            \Predis\Autoloader::register();
+
+            $this->redis = new \Predis\Client($this->configuration["redis"]["connection"]);
         }
 
         // set up routes

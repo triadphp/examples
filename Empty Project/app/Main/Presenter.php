@@ -2,7 +2,7 @@
 
 namespace MyEmptyProject\Main;
 
-class Presenter extends \Triad\Presenter
+abstract class Presenter extends \Triad\Presenter
 {
     // TODO define custom shortcuts here
 

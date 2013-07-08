@@ -19,11 +19,12 @@ require_once(LIBS_DIR . "/Triad/Load.php");
 $config = \Triad\Config::factory(APP_DIR . "/config.php");
 
 // initialize application, application contains database connection and routes declaration
+// TODO update your application
 $application = new \MyEmptyProject\Main\Application($config);
 $application->setEnvironment($config["environment"]);
 
 // initialize default response handler
-// TODO define default respoonse
+// TODO define default or custom respoonse
 $response = new \Triad\Responses\JsonResponse();
 
 // get request from current webserver http request and set default handler

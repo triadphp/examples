@@ -4,7 +4,7 @@ namespace MySimpleService\Exceptions;
 
 use \Triad\Exceptions\TriadException;
 
-class MyException extends TriadException
+class UserException extends TriadException
 {
     public function isFatal() {
         return false;

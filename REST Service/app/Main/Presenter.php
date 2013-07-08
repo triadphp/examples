@@ -2,10 +2,16 @@
 
 namespace MySimpleService\Main;
 
-class Presenter extends \Triad\Presenter
+abstract class Presenter extends \Triad\Presenter
 {
-    // shortcuts - make them easily available in all presenters
+    /**
+     * @var \Triad\Database
+     */
     protected $db;
+
+    /**
+     * @var \Predis
+     */
     protected $redis;
 
     /**

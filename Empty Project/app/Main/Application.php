@@ -22,6 +22,9 @@ class Application extends \Triad\Application
      */
     public function handleException(\Exception $e, Request $request) {
         // TODO do custom exception handling
+        if ($e instanceof \MyEmptyProject\Exceptions\MyException) {
+            print "custom exception occured";
+        }
 
         return parent::handleException($e, $request);
     }
