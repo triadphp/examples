@@ -1,0 +1,134 @@
+/**
+ * Triad Framework
+ * Main color #2B3F51
+ */
+*, body, html {
+    font-size: 11px;
+    font-family: 'lucida grande','tahoma','verdana','arial','sans-serif';
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.content {
+    padding: 10px;
+}
+
+.clear {
+    overflow: hidden;
+    clear: both;
+}
+
+.leftFloat {
+    float: left;
+}
+
+.rightFloat {
+    float: right;
+}
+
+.errorBlock h1,
+.errorBlock h2 {
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.errorBlock h2 {
+    font-size: 11px;
+}
+
+.errorSummary {
+    /*background: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 20%);*/
+}
+
+.errorDetail {
+    padding: 5px 10px;
+    margin: 0px -10px -10px -10px;
+    background: rgba(0,0,0,0.5);
+}
+
+.errorBlock dl {
+    overflow: hidden;
+}
+
+.errorBlock dt {
+    float: left;
+    width: 50px;
+    font-weight: bold;
+}
+
+.errorBlock dl.separator {
+    border-top: 1px dotted rgba(255,255,255,0.5);
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+.footer {
+    padding: 0 10px;
+    line-height: 20px;
+    height: 20px;
+    border-top: 1px dotted #aaa;
+    color: #aaa;
+    font-size: 10px;
+}
+
+.header {
+    padding: 0 10px;
+    height: 35px;
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 10%), #2B3F51;
+    box-shadow: 0px -3px 15px black;
+    overflow: hidden;
+}
+
+.header .button {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    float: right;
+}
+
+.header .button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.headerContents {
+    margin-top: 5px;
+}
+
+#pageLogo a {
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    display: block;
+    width: 150px;
+    color: #fff;
+}
+
+.softBlock {
+    border: 1px solid #8cac47;
+    background: rgba(149, 184, 73, 0.15);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.errorBlock {
+    border: 1px solid #990000;
+    background: rgba(153, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.login {
+    margin: 30px auto;
+    width: 500px;
+}
