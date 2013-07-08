@@ -13,8 +13,8 @@ latest [Predis PHP library](https://github.com/nrk/predis) into `/libs/` directo
 disable redis in config.php file.
 
 # Prerequisites
-PHP 5.3 or better
-PDO compatible database for REST Service example
+- PHP 5.3 or better
+- PDO compatible database for REST Service example
 
 # Projects structure
 - `app/` - application root (constant `APP_DIR`)

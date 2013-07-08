@@ -27,24 +27,27 @@ class User extends \MySimpleService\Main\Presenter
             $this->actionCreate();
         }
         else if ($this->userId != null) {
-            // get user info
-            // restore from cache
-            if ($this->redis && $this->redis->exists("user:{$this->userId}")) {
-                $this->return = unserialize($this->redis->get("user:{$this->userId}"));
-                return;
-            }
-
-            $users = new UserRepository($this->db);
-            $this->return = $users->get($this->userId);
-
-            // save to cache
-            if ($this->redis)
-                $this->redis->set("user:{$this->userId}", serialize($this->return));
+			$this->actionGet();
         } else {
             // list users
             $this->actionList();
         }
     }
+	
+	public function actionGet() {
+		// restore from cache
+		if ($this->redis && $this->redis->exists("user:{$this->userId}")) {
+			$this->return = unserialize($this->redis->get("user:{$this->userId}"));
+			return;
+		}
+
+		$users = new UserRepository($this->db);
+		$this->return = $users->get($this->userId);
+
+		// save to cache
+		if ($this->redis)
+			$this->redis->set("user:{$this->userId}", serialize($this->return));
+	}
 
     public function actionList() {
         $users = new UserRepository($this->db);
