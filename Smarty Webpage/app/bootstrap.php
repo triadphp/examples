@@ -20,14 +20,12 @@ $config = \Triad\Config::factory(APP_DIR . "/config.php");
 
 // initialize application, application contains database connection and routes declaration
 $application = new \SmartyProject\Main\Application($config);
-$application->setEnvironment($config["environment"]);
 
 // initialize default response handler
 $response = new \SmartyProject\Main\SmartyResponse(APP_DIR . "/Templates", TMP_DIR . "/template_c");
 
 // get request from current webserver http request and set default handler
 $request = \Triad\Requests\HttpRequest::fromServerRequest($response);
-$request->setBasePath($config["base_path"]);
 
 // handle main request
 $request->execute($application);

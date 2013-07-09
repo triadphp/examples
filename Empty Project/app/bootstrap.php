@@ -21,15 +21,13 @@ $config = \Triad\Config::factory(APP_DIR . "/config.php");
 // initialize application, application contains database connection and routes declaration
 // TODO update your application
 $application = new \MyEmptyProject\Main\Application($config);
-$application->setEnvironment($config["environment"]);
 
 // initialize default response handler
-// TODO define default or custom respoonse
+// TODO define default or custom response
 $response = new \Triad\Responses\JsonResponse();
 
 // get request from current webserver http request and set default handler
 $request = \Triad\Requests\HttpRequest::fromServerRequest($response);
-$request->setBasePath($config["base_path"]);
 
 // handle main request
 $request->execute($application);

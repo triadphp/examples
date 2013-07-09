@@ -20,7 +20,6 @@ $config = \Triad\Config::factory(APP_DIR . "/config.php");
 
 // initialize application, application contains database connection and routes declaration
 $application = new \MySimpleService\Main\Application($config);
-$application->setEnvironment($config["environment"]);
 
 // initialize default response handler
 $response = new \Triad\Responses\JsonResponse();
@@ -30,7 +29,6 @@ $request = \Triad\Requests\HttpRequest::fromServerRequest($response, array(
     "format_override" => true, // allow changeing response type to php or json http://localhost/?response_format=php
     "enable_json_callback" => true // enables callback for jsonp requests http://localhost/?callback=myfunction
 ));
-$request->setBasePath($config["base_path"]);
 
 // handle main request
 $request->execute($application);
