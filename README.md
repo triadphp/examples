@@ -18,7 +18,7 @@ disable redis in config.php file.
 - PHP 5.3 or better
 - PDO compatible database for REST Service example
 
-# Projects structure
+## Projects structure
 - `app/` - application root (constant `APP_DIR`)
 - `app/config.php` - main configuration file, containing service settings
 - `app/bootstrap.php` - loads framework and autoloader, define default response type here
@@ -35,7 +35,7 @@ disable redis in config.php file.
 - `www/index.php` or `index.php` - loader for application - includes `app/bootstrap.php`
 - `www/` or `/` - folder containing webpage assets, static resources
 
-#Creating a new application from example
+## Creating a new application
 - Take example of your choice and change main namespace name in app folder -  
 e.g. for `Empty Project` replace all `MyEmptyProject` to desired name.
 - update `app/config.php` and define service and webpage settings (database dns, redis, ...)
@@ -47,5 +47,8 @@ e.g. for `Empty Project` replace all `MyEmptyProject` to desired name.
 - start creating and editing presenters in `app/Presenters/`...
 
 
-# Author
+## Author
 - [Marek Vavrecan](mailto:vavrecan@gmail.com)
+
+## License
+- [GNU General Public License, version 3](http://www.gnu.org/licenses/gpl-3.0.html)
