@@ -39,7 +39,7 @@ disable redis in config.php file.
 - Take example of your choice and change main namespace name in app folder -  
 e.g. for `Empty Project` replace all `MyEmptyProject` to desired name.
 - update `app/config.php` and define service and webpage settings (database dns, redis, ...)
-- optional - implement custom response type (smarty), check `Smarty Webpage` example
+- optional - implement custom response type (smarty), check `Smarty Webpage/app/Main/SmartyResponse.php` example
 - set default response type in `app/bootstrap.php`
 - initialize custom services in `app/Main/Application.php` (init)
 - do custom error handling in `app/Main/Application.php` (handleException)
