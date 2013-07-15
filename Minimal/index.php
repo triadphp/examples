@@ -14,6 +14,10 @@ class Application extends \Triad\Application
     public function home(Application $application, \Triad\Request $request, $params = array()) {
         $this->setPageTemplate($request, "index");
         $request->response["path"] = $request->getPath();
+
+        // do internal request
+        $result = \Triad\Request::factory("/sum-1plus1")->execute($application)->response->get();
+        $request->response["internal_sum"] = $result["sum"];
     }
 
     public function sum(Application $application, \Triad\Request $request, $params = array()) {
