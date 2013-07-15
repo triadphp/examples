@@ -7,6 +7,8 @@ contains very basic way to implement MVP handler.
 contains sample of JSON REST API server that handles simple user creation and editing.
 - Smarty Webpage
 contains sample of custom template engine implementation
+- Minimal
+very basic and simple html handler without using MVP and namespaces 
 
 In order to make them working you have to download and copy 
 latest [Triad PHP Framework](https://github.com/triadphp/triad) into `/libs/` directory. 
@@ -45,7 +47,6 @@ e.g. for `Empty Project` replace all `MyEmptyProject` to desired name.
 - do custom error handling in `app/Main/Application.php` (handleException)
 - define shortcuts for presenters in `app/Main/Presenter.php`
 - start creating and editing presenters in `app/Presenters/`...
-
 
 ## Author
 - [Marek Vavrecan](mailto:vavrecan@gmail.com)
