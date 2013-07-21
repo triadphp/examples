@@ -34,9 +34,7 @@ class Application extends \Triad\Application
         }
 
         // set up routes
-        $router = new \Triad\Router();
-        $router->addMVP("\\" . APP_NAMESPACE . "\\Presenters");
-        $this->setRouter($router);
+        $this->router->addMVP("\\" . APP_NAMESPACE . "\\Presenters");
     }
 
     public function getDatabase() {

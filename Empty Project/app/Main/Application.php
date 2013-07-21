@@ -10,9 +10,7 @@ class Application extends \Triad\Application
         // TODO initialize custom libraries
 
         // set up routes
-        $router = new \Triad\Router();
-        $router->addMVP("\\" . APP_NAMESPACE . "\\Presenters");
-        $this->setRouter($router);
+        $this->router->addMVP("\\" . APP_NAMESPACE . "\\Presenters");
     }
 
     /**

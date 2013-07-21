@@ -19,14 +19,10 @@ class Application extends \Triad\Application
         // initialize apps
 
         // set up routes
-        $router = new \Triad\Router();
-
-        $router->add("#^/custom-(?P<number>\d+)#", array($this, "customHandler"), true);
+        $this->router->add("#^/custom-(?P<number>\d+)#", array($this, "customHandler"), true);
 
         // namespace location containing Presenters
-        $router->addMVP("\\" . APP_NAMESPACE . "\\Presenters");
-
-        $this->setRouter($router);
+        $this->router->addMVP("\\" . APP_NAMESPACE . "\\Presenters");
     }
 
     public function getDatabase() {

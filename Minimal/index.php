@@ -5,10 +5,8 @@ class Application extends \Triad\Application
 {
     public function init() {
         // set up routes
-        $router = new \Triad\Router();
-        $router->add("/", array($this, "home"));
-        $router->add("#/sum-(?<num1>\d+)plus(?<num2>\d+)#", array($this, "sum"), true);
-        $this->setRouter($router);
+        $this->router->add("/", array($this, "home"));
+        $this->router->add("#/sum-(?<num1>\d+)plus(?<num2>\d+)#", array($this, "sum"), true);
     }
 
     public function home(Application $application, \Triad\Request $request, $params = array()) {
